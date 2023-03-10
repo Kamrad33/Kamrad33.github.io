@@ -1,0 +1,431 @@
+
+<title>Список новостей</title><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link href="/assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="main_content">
+      <header id="header">
+        <div class="header_Top">
+          <div class="header_Top_Container">
+            <!--include headerTopButtons.pug-->
+                  <div class="listBtn_Group_Left_Top" role="group" style{gap: gap}>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="indexPg"><a href="index.html"><span>Главная</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="newsPg"><a href="newslist.html"><span>Новости</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="pricePg"><a href="index.html"><span>Размещение и тарифы</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:5px;flex-direction:row-reverse;" id="mapPg"><a href="index.html"><span>Объявления на карте</span></a>
+                            <div class="topButtonIcon grey">
+                               <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.43757 1.74419C6.70501 0.627907 5.49571 0 4.13525 0C2.78641 0 1.57711 0.627907 0.821293 1.74419C0.0654788 2.83721 -0.10894 4.23256 0.356176 5.45349C0.484083 5.77907 0.681758 6.11628 0.937572 6.4186L3.87943 9.88372C3.9492 9.95349 4.01897 10 4.12362 10C4.22827 10 4.29804 9.95349 4.3678 9.88372L7.32129 6.4186C7.57711 6.11628 7.78641 5.7907 7.90269 5.45349C8.3678 4.23256 8.19339 2.83721 7.43757 1.74419ZM4.13525 5.86047C3.13525 5.86047 2.30966 5.03488 2.30966 4.03488C2.30966 3.03488 3.13525 2.2093 4.13525 2.2093C5.13525 2.2093 5.96083 3.03488 5.96083 4.03488C5.96083 5.03488 5.14687 5.86047 4.13525 5.86047Z" fill="#8291A3"/>
+</svg>
+
+                            </div>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="contactsPg"><a href="contacts.html"><span>Контакты</span></a>
+                          </div>
+                  </div>
+            <div class="header_Top_wrapper">         
+                    <div class="listBtn_Group_Right_Top" role="group">
+                            <div class="listBtn primary grey w5" style="gap:11px;flex-direction:row;" id="favsPg"><a href="index.html"><span>Закладки</span></a>
+                              <div class="topButtonIcon grey">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99995 4.51054L7.18968 3.39006C6.94123 3.0465 6.6662 2.76153 6.37179 2.53386L6.37174 2.53382C5.79877 2.09069 5.16721 1.875 4.4696 1.875C3.5098 1.875 2.64097 2.25551 2.00445 2.94583L7.99995 4.51054ZM7.99995 4.51054L8.81029 3.39011M7.99995 4.51054L8.81029 3.39011M8.81029 3.39011C9.05885 3.04642 9.33377 2.76156 9.62808 2.53387L8.81029 3.39011ZM6.20794 12.5491L6.20799 12.5491L6.21093 12.5516C6.74901 13.0102 7.36215 13.5328 8.00002 14.0899C8.63302 13.5369 9.24202 13.0178 9.77724 12.5616L9.79235 12.5488L9.79244 12.5487C11.4267 11.156 12.7422 10.0308 13.6432 8.94347L13.6433 8.94342C14.6159 7.76984 15 6.74939 15 5.68335C15 4.59577 14.628 3.63201 13.9955 2.94592C13.359 2.25552 12.4902 1.875 11.5304 1.875C10.8329 1.875 10.2013 2.09065 9.62821 2.53377L6.20794 12.5491ZM6.20794 12.5491C4.57342 11.1562 3.25796 10.0308 2.35685 8.94355C1.38413 7.76977 1 6.74932 1 5.68347C1 4.59578 1.37199 3.63202 2.00436 2.94592L6.20794 12.5491Z" stroke="#8291A3" stroke-width="2"/>
+</svg>
+
+                              </div>
+                            </div>
+                            <div class="listBtn hidden purple w5" style="gap:5px;flex-direction:row-reverse;" id="registerPg"><a href="login.html"><span>Вход и регистрация</span></a>
+                            </div>
+                    </div>
+                    <div class="header_Top_user visible" id="userDiv">
+                      <div class="header_Top_user_icon"></div>
+                      <div class="header_Top_user_name"><span>Dmitriy</span></div>
+                      <div class="header_Top_user_button header" id="userMenuButton"><svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1.75L5.5 6.25L10 1.75" stroke="#664EF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                      </div>
+                      <div class="header_Top_user_menu active hidden" id="userMenu">
+                        <div class="header_Top_user_menu_icon"></div>
+                        <div class="header_Top_user_menu_name"><span>Dmitriy</span></div>
+                        <div class="header_Top_user_menu_phone"><span>+375 (29) 291-14-44</span></div>
+                        <div class="header_Top_user_menu_email"><span>vladimir6234@tut.by</span></div>
+                        <div class="header_Top_user_menu_buttons">
+                          <div class="header_Top_user_menu_buttons_edit">
+                            <button class="header" id="edit">Редактировать</button>
+                          </div>
+                          <div class="header_Top_user_menu_buttons_exit">
+                            <button class="header" id="exit">Выход</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_Bottom">
+          <div class="header_Bottom_Container"><img src="../../assets/images/logo.png">
+                  <div class="listBtn_Group_Middle_Bottom" role="group">
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="roomsPg"><a href="cathalog.html"><span>Квартиры на сутки</span></a>
+                            <div class="topButtonIcon yellow">
+                               <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0069 2.61628C9.90811 0.941861 8.09415 0 6.05346 0C4.0302 0 2.21625 0.941861 1.08253 2.61628C-0.0511958 4.25581 -0.312824 6.34884 0.384851 8.18023C0.576711 8.6686 0.873223 9.17442 1.25694 9.62791L5.66973 14.8256C5.77439 14.9302 5.87904 15 6.03601 15C6.19299 15 6.29764 14.9302 6.40229 14.8256L10.8325 9.62791C11.2162 9.17442 11.5302 8.68605 11.7046 8.18023C12.4023 6.34884 12.1407 4.25581 11.0069 2.61628ZM6.05346 8.7907C4.55346 8.7907 3.31508 7.55233 3.31508 6.05233C3.31508 4.55233 4.55346 3.31395 6.05346 3.31395C7.55346 3.31395 8.79183 4.55233 8.79183 6.05233C8.79183 7.55233 7.5709 8.7907 6.05346 8.7907Z" fill="#FFD54F"/>
+</svg>
+
+                            </div>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="housesPg"><a href="cathalog.html"><span>Коттеджи и усадьбы </span></a>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="bathsPg"><a href="cathalog.html"><span>Бани и Сауны</span></a>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="carsPg"><a href="cathalog.html"><span>Авто напрокат</span></a>
+                          </div>
+                  </div>
+                  <button class="stdBtn primary purple w7 standard" id="create_ad_button" style="gap:5px;flex-direction:row;width:undefined;">
+                    <div class="stdBtn_innerText"><span id="create_ad_button_innerText">+ Разместить объявление</span>
+                    </div>
+                  </button>
+          </div>
+        </div>
+      </header>
+      <div class="content" id="newslistPage">
+        <div class="newslist">
+          <div class="newslist_content">
+            <div class="newslist_content_innerContainer">
+              <div class="newslist_content_innerContainer_top">
+                <div class="newslist_content_innerContainer_top_left">
+                  <div class="newslist_content_innerContainer_top_left_breadcrumbs">
+                          <section class="s-breadcrumbs">
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="index.html"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2831_2342)">
+<path d="M11.7985 5.36427L6.41446 0.458394C6.17814 0.243027 5.82177 0.243051 5.58554 0.458371L0.201516 5.3643C0.0122119 5.5368 -0.0503192 5.80258 0.042165 6.04138C0.134673 6.28019 0.359907 6.43448 0.616008 6.43448H1.47593V11.3498C1.47593 11.5447 1.63394 11.7027 1.82883 11.7027H4.77993C4.97481 11.7027 5.13283 11.5447 5.13283 11.3498V8.36537H6.86724V11.3498C6.86724 11.5447 7.02526 11.7027 7.22014 11.7027H10.1711C10.366 11.7027 10.524 11.5447 10.524 11.3498V6.43448H11.3841C11.6402 6.43448 11.8654 6.28016 11.9579 6.04138C12.0503 5.80256 11.9878 5.5368 11.7985 5.36427Z" fill="#664EF9"/>
+<path d="M10.4315 1.00195H8.06152L10.7844 3.47779V1.35483C10.7844 1.15995 10.6264 1.00195 10.4315 1.00195Z" fill="#664EF9"/>
+</g>
+<defs>
+<clipPath id="clip0_2831_2342">
+<rect width="12" height="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</a></li>
+                              <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="newslist.html"><span class="breadcrumbs_title">Новости</span></a></li>
+                            </ul>
+                          </section>
+                  </div>
+                  <div class="newslist_content_innerContainer_top_left_title"> 
+                    <h1>Новости</h1>
+                  </div>
+                </div>
+                <div class="newslist_content_innerContainer_top_search">
+                        <div class="searchInput search">
+                          <input class="search purple w4" type="text" placeholder="Поиск по статьям" id="search_news_input" style="gap:5px;flex-direction:left;">
+                          <div class="searchInput_button">
+                            <button class="purple" id="search_news_input_button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8676 15.2581L13.5441 11.9344C13.3941 11.7844 13.1907 11.7011 12.9774 11.7011H12.434C13.3541 10.5243 13.9008 9.04417 13.9008 7.43401C13.9008 3.60364 10.7973 0.5 6.96711 0.5C3.13693 0.5 0.0334473 3.60364 0.0334473 7.43401C0.0334473 11.2644 3.13693 14.368 6.96711 14.368C8.57718 14.368 10.0573 13.8213 11.234 12.9012V13.4446C11.234 13.658 11.3173 13.8613 11.4673 14.0113L14.7908 17.335C15.1042 17.6483 15.6108 17.6483 15.9209 17.335L16.8642 16.3916C17.1776 16.0782 17.1776 15.5715 16.8676 15.2581ZM6.96711 11.7011C4.61033 11.7011 2.70024 9.79424 2.70024 7.43401C2.70024 5.07711 4.607 3.16693 6.96711 3.16693C9.32388 3.16693 11.234 5.07378 11.234 7.43401C11.234 9.79091 9.32722 11.7011 6.96711 11.7011Z" fill="white"/>
+</svg>
+
+                            </button>
+                          </div>
+                        </div>
+                </div>
+              </div>
+              <div class="newslist_content_innerContainer_background"></div>
+              <div class="newslist_content_innerContainer_newsCards">
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      <div class="newslist_content_innerContainer_newsCards_card">
+                              <div class="newsCard">
+                                <div class="newsCard_top">
+                                  <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                </div>
+                                <div class="newsCard_middle">
+                                  <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                  <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                  <hr>
+                                </div>
+                                <div class="newsCard_bottom">
+                                  <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                  <div class="newsCard_bottom_button">
+                                          <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                            <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                            </div>
+                                          </button>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+              </div>
+              <div class="newslist_content_innerContainer_pagination">
+                <button class="prevBtn" id="prevBtn"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 1.12305L1.42857 7.69448L8 14.2659" stroke="#664EF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                </button>
+                <ul id="pagination">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>...</li>
+                  <li>11</li>
+                </ul>
+                <button class="nextBtn" id="nextBtn"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 14.2852L7.57143 7.71373L0.999999 1.1423" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_innerContainer">
+          <div class="footer_leftContainter">
+            <div class="footer_leftContainter_logo"><img src="../../assets/images/logo.png">
+              <div class="footer_leftContainter_logoUnderText">СДАЁМ БАЙ</div>
+            </div>
+            <div class="footer_leftContainter_contactText">ИП Шушкевич Андрей Викторович <br> УНП 192602485 Минским горисполкомом <br> 10.02.2016 <br> 220068, РБ, г. Минск, ул. Осипенко, 21, кв.23 <br> +375 29 621 48 33, sdaem@sdaem.by <br> Режим работы: 08:00-22:00</div>
+          </div>
+          <div class="footer_middleContainer">
+            <div class="footer_middleContainer_Buttons">
+              <div class="footer_middleContainer_Buttons_leftButtons"><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title" href="/cathalog.html">Коттетжи и усадьбы</div></a><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Бани и сауны</div></a><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Авто на прокат</div></a></div>
+              <div class="footer_middleContainer_Buttons_middleButtons"><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Квартиры</div></a>
+                <div class="footer_middleContainer_Buttons_List">
+                  <div class="footer_middleContainer_Buttons_ButtonList"><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Минске</div></a><a href="/cathalog.html"> 
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Гомеле</div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Бресте</div></a></div>
+                  <div class="footer_middleContainer_Buttons_ButtonList"><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Витебске </div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Гродно</div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Могилеве </div></a></div>
+                </div>
+              </div>
+              <div class="footer_middleContainer_Buttons_rightButtons">
+                <div class="footer_middleContainer_Buttons_ButtonList"><a href="/newslist.html">
+                    <div class="footer_middleContainer_Buttons_Button">Новости</div></a><a href="/cathalog.html">
+                    <div class="footer_middleContainer_Buttons_Button">Размещение и тарифы </div></a><a href="/cathalog.html">
+                    <div class="footer_middleContainer_Buttons_Button">Объявления на карте</div></a><a href="/contacts.html">
+                    <div class="footer_middleContainer_Buttons_Button">Контакты </div></a></div>
+              </div>
+            </div>
+            <div class="footer_middleContainer_Icons">
+              <div class="footer_middleContainer_Icons_Social">
+                <div class="footer_middleContainer_Icons_Social_Text">Мы в соцсетях</div>
+                <div class="footer_middleContainer_Icons_Social_icons">
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon" href="http://vk.com"><a href="http://vk.com">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8056 5.90907C8.48036 5.90907 5.79677 8.59267 5.79677 11.9179C5.79677 15.2431 8.48036 17.9267 11.8056 17.9267C15.1308 17.9267 17.8143 15.2431 17.8143 11.9179C17.8143 8.59267 15.1308 5.90907 11.8056 5.90907ZM11.8056 15.8231C9.65517 15.8231 7.90028 14.0683 7.90028 11.9179C7.90028 9.76747 9.65517 8.01259 11.8056 8.01259C13.9559 8.01259 15.7108 9.76747 15.7108 11.9179C15.7108 14.0683 13.9559 15.8231 11.8056 15.8231ZM18.0604 4.26259C17.2841 4.26259 16.6571 4.88954 16.6571 5.66591C16.6571 6.44228 17.2841 7.06923 18.0604 7.06923C18.8368 7.06923 19.4638 6.44521 19.4638 5.66591C19.464 5.48156 19.4279 5.29897 19.3574 5.12861C19.287 4.95825 19.1836 4.80345 19.0533 4.6731C18.9229 4.54274 18.7681 4.43938 18.5977 4.36894C18.4274 4.2985 18.2448 4.26236 18.0604 4.26259ZM23.5184 11.9179C23.5184 10.3007 23.5331 8.69814 23.4423 7.08388C23.3515 5.20888 22.9237 3.54482 21.5526 2.17372C20.1786 0.799699 18.5175 0.374895 16.6425 0.284075C15.0253 0.193254 13.4227 0.207903 11.8085 0.207903C10.1913 0.207903 8.58876 0.193254 6.9745 0.284075C5.0995 0.374895 3.43544 0.802629 2.06435 2.17372C0.690324 3.54775 0.26552 5.20888 0.174699 7.08388C0.0838792 8.70107 0.0985277 10.3036 0.0985277 11.9179C0.0985277 13.5321 0.0838792 15.1376 0.174699 16.7519C0.26552 18.6269 0.693254 20.2909 2.06435 21.662C3.43837 23.036 5.0995 23.4608 6.9745 23.5517C8.59169 23.6425 10.1942 23.6278 11.8085 23.6278C13.4257 23.6278 15.0282 23.6425 16.6425 23.5517C18.5175 23.4608 20.1815 23.0331 21.5526 21.662C22.9267 20.288 23.3515 18.6269 23.4423 16.7519C23.536 15.1376 23.5184 13.5351 23.5184 11.9179ZM20.9403 18.8261C20.7265 19.3593 20.4686 19.7577 20.0556 20.1679C19.6425 20.581 19.247 20.8388 18.7138 21.0526C17.1727 21.6649 13.5136 21.5272 11.8056 21.5272C10.0975 21.5272 6.43544 21.6649 4.89443 21.0556C4.36122 20.8417 3.96279 20.5839 3.55263 20.1708C3.13954 19.7577 2.88173 19.3622 2.66786 18.829C2.05849 17.2851 2.19618 13.6259 2.19618 11.9179C2.19618 10.2099 2.05849 6.54775 2.66786 5.00673C2.88173 4.47353 3.13954 4.07509 3.55263 3.66493C3.96571 3.25478 4.36122 2.99404 4.89443 2.78017C6.43544 2.17079 10.0975 2.30849 11.8056 2.30849C13.5136 2.30849 17.1757 2.17079 18.7167 2.78017C19.2499 2.99404 19.6483 3.25185 20.0585 3.66493C20.4716 4.07802 20.7294 4.47353 20.9433 5.00673C21.5526 6.54775 21.4149 10.2099 21.4149 11.9179C21.4149 13.6259 21.5526 17.2851 20.9403 18.8261Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon"><a href="http://vk.com">
+                       <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.2554 1.61604C24.4231 1.06908 24.2554 0.667969 23.4625 0.667969H20.836C20.1676 0.667969 19.8622 1.01497 19.6946 1.39608C19.6946 1.39608 18.3591 4.59437 16.4668 6.66814C15.8559 7.27156 15.5769 7.46212 15.2439 7.46212C15.0774 7.46212 14.8355 7.27156 14.8355 6.7246V1.61604C14.8355 0.959685 14.6427 0.667969 14.0857 0.667969H9.95847C9.54167 0.667969 9.29015 0.971447 9.29015 1.26081C9.29015 1.88188 10.2363 2.02539 10.3333 3.77568V7.57269C10.3333 8.40432 10.1812 8.55606 9.84589 8.55606C8.956 8.55606 6.79056 5.34601 5.50543 1.67133C5.25511 0.957332 5.0024 0.669145 4.33169 0.669145H1.70633C0.955376 0.669145 0.805664 1.01615 0.805664 1.39726C0.805664 2.08185 1.69555 5.46951 4.9509 9.94994C7.12112 13.0094 10.1765 14.668 12.9599 14.668C14.6283 14.668 14.8343 14.2998 14.8343 13.6646V11.3521C14.8343 10.6157 14.9936 10.4675 15.5218 10.4675C15.9098 10.4675 16.5781 10.6604 18.1364 12.1343C19.9161 13.8822 20.2108 14.6668 21.2108 14.6668H23.8362C24.586 14.6668 24.9608 14.2986 24.7452 13.5717C24.5093 12.8483 23.6589 11.7955 22.5307 10.5498C21.9175 9.83937 21.0012 9.07479 20.7222 8.6925C20.3329 8.19964 20.4455 7.98203 20.7222 7.54446C20.7234 7.54564 23.9224 3.1205 24.2554 1.61604Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon"><a href="http://vk.com">
+                       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8047 0.667969C5.28266 0.667969 0.805664 5.14497 0.805664 10.667C0.805664 15.657 4.46166 19.793 9.24266 20.546V13.558H6.70266V10.667H9.24266V8.46397C9.24266 5.95597 10.7357 4.57297 13.0187 4.57297C14.1127 4.57297 15.2587 4.76797 15.2587 4.76797V7.22697H13.9947C12.7547 7.22697 12.3667 7.99897 12.3667 8.78997V10.665H15.1377L14.6947 13.556H12.3667V20.544C17.1477 19.795 20.8037 15.658 20.8037 10.667C20.8037 5.14497 16.3267 0.667969 10.8047 0.667969Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                </div>
+              </div>
+              <div class="footer_middleContainer_Icons_Card">
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/visaImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img">   <img src="../../assets/images/webpayImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/visaVfImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/masterImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/secureCodeImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/belkartImg.png"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

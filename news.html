@@ -1,0 +1,316 @@
+
+<title>Список новостей</title><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link href="/assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="main_content">
+      <header id="header">
+        <div class="header_Top">
+          <div class="header_Top_Container">
+            <!--include headerTopButtons.pug-->
+                  <div class="listBtn_Group_Left_Top" role="group" style{gap: gap}>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="indexPg"><a href="index.html"><span>Главная</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="newsPg"><a href="newslist.html"><span>Новости</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="pricePg"><a href="index.html"><span>Размещение и тарифы</span></a>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:5px;flex-direction:row-reverse;" id="mapPg"><a href="index.html"><span>Объявления на карте</span></a>
+                            <div class="topButtonIcon grey">
+                               <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.43757 1.74419C6.70501 0.627907 5.49571 0 4.13525 0C2.78641 0 1.57711 0.627907 0.821293 1.74419C0.0654788 2.83721 -0.10894 4.23256 0.356176 5.45349C0.484083 5.77907 0.681758 6.11628 0.937572 6.4186L3.87943 9.88372C3.9492 9.95349 4.01897 10 4.12362 10C4.22827 10 4.29804 9.95349 4.3678 9.88372L7.32129 6.4186C7.57711 6.11628 7.78641 5.7907 7.90269 5.45349C8.3678 4.23256 8.19339 2.83721 7.43757 1.74419ZM4.13525 5.86047C3.13525 5.86047 2.30966 5.03488 2.30966 4.03488C2.30966 3.03488 3.13525 2.2093 4.13525 2.2093C5.13525 2.2093 5.96083 3.03488 5.96083 4.03488C5.96083 5.03488 5.14687 5.86047 4.13525 5.86047Z" fill="#8291A3"/>
+</svg>
+
+                            </div>
+                          </div>
+                          <div class="listBtn primary grey w4" style="gap:;flex-direction:row-reverse;" id="contactsPg"><a href="contacts.html"><span>Контакты</span></a>
+                          </div>
+                  </div>
+            <div class="header_Top_wrapper">         
+                    <div class="listBtn_Group_Right_Top" role="group">
+                            <div class="listBtn primary grey w5" style="gap:11px;flex-direction:row;" id="favsPg"><a href="index.html"><span>Закладки</span></a>
+                              <div class="topButtonIcon grey">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.99995 4.51054L7.18968 3.39006C6.94123 3.0465 6.6662 2.76153 6.37179 2.53386L6.37174 2.53382C5.79877 2.09069 5.16721 1.875 4.4696 1.875C3.5098 1.875 2.64097 2.25551 2.00445 2.94583L7.99995 4.51054ZM7.99995 4.51054L8.81029 3.39011M7.99995 4.51054L8.81029 3.39011M8.81029 3.39011C9.05885 3.04642 9.33377 2.76156 9.62808 2.53387L8.81029 3.39011ZM6.20794 12.5491L6.20799 12.5491L6.21093 12.5516C6.74901 13.0102 7.36215 13.5328 8.00002 14.0899C8.63302 13.5369 9.24202 13.0178 9.77724 12.5616L9.79235 12.5488L9.79244 12.5487C11.4267 11.156 12.7422 10.0308 13.6432 8.94347L13.6433 8.94342C14.6159 7.76984 15 6.74939 15 5.68335C15 4.59577 14.628 3.63201 13.9955 2.94592C13.359 2.25552 12.4902 1.875 11.5304 1.875C10.8329 1.875 10.2013 2.09065 9.62821 2.53377L6.20794 12.5491ZM6.20794 12.5491C4.57342 11.1562 3.25796 10.0308 2.35685 8.94355C1.38413 7.76977 1 6.74932 1 5.68347C1 4.59578 1.37199 3.63202 2.00436 2.94592L6.20794 12.5491Z" stroke="#8291A3" stroke-width="2"/>
+</svg>
+
+                              </div>
+                            </div>
+                            <div class="listBtn hidden purple w5" style="gap:5px;flex-direction:row-reverse;" id="registerPg"><a href="login.html"><span>Вход и регистрация</span></a>
+                            </div>
+                    </div>
+                    <div class="header_Top_user visible" id="userDiv">
+                      <div class="header_Top_user_icon"></div>
+                      <div class="header_Top_user_name"><span>Dmitriy</span></div>
+                      <div class="header_Top_user_button header" id="userMenuButton"><svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1.75L5.5 6.25L10 1.75" stroke="#664EF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                      </div>
+                      <div class="header_Top_user_menu active hidden" id="userMenu">
+                        <div class="header_Top_user_menu_icon"></div>
+                        <div class="header_Top_user_menu_name"><span>Dmitriy</span></div>
+                        <div class="header_Top_user_menu_phone"><span>+375 (29) 291-14-44</span></div>
+                        <div class="header_Top_user_menu_email"><span>vladimir6234@tut.by</span></div>
+                        <div class="header_Top_user_menu_buttons">
+                          <div class="header_Top_user_menu_buttons_edit">
+                            <button class="header" id="edit">Редактировать</button>
+                          </div>
+                          <div class="header_Top_user_menu_buttons_exit">
+                            <button class="header" id="exit">Выход</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="header_Bottom">
+          <div class="header_Bottom_Container"><img src="../../assets/images/logo.png">
+                  <div class="listBtn_Group_Middle_Bottom" role="group">
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="roomsPg"><a href="cathalog.html"><span>Квартиры на сутки</span></a>
+                            <div class="topButtonIcon yellow">
+                               <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0069 2.61628C9.90811 0.941861 8.09415 0 6.05346 0C4.0302 0 2.21625 0.941861 1.08253 2.61628C-0.0511958 4.25581 -0.312824 6.34884 0.384851 8.18023C0.576711 8.6686 0.873223 9.17442 1.25694 9.62791L5.66973 14.8256C5.77439 14.9302 5.87904 15 6.03601 15C6.19299 15 6.29764 14.9302 6.40229 14.8256L10.8325 9.62791C11.2162 9.17442 11.5302 8.68605 11.7046 8.18023C12.4023 6.34884 12.1407 4.25581 11.0069 2.61628ZM6.05346 8.7907C4.55346 8.7907 3.31508 7.55233 3.31508 6.05233C3.31508 4.55233 4.55346 3.31395 6.05346 3.31395C7.55346 3.31395 8.79183 4.55233 8.79183 6.05233C8.79183 7.55233 7.5709 8.7907 6.05346 8.7907Z" fill="#FFD54F"/>
+</svg>
+
+                            </div>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="housesPg"><a href="cathalog.html"><span>Коттеджи и усадьбы </span></a>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="bathsPg"><a href="cathalog.html"><span>Бани и Сауны</span></a>
+                          </div>
+                          <div class="listBtn primary black w6" style="gap:15px;flex-direction:row;" id="carsPg"><a href="cathalog.html"><span>Авто напрокат</span></a>
+                          </div>
+                  </div>
+                  <button class="stdBtn primary purple w7 standard" id="create_ad_button" style="gap:5px;flex-direction:row;width:undefined;">
+                    <div class="stdBtn_innerText"><span id="create_ad_button_innerText">+ Разместить объявление</span>
+                    </div>
+                  </button>
+          </div>
+        </div>
+      </header>
+      <div class="content" id="newsPage">
+        <div class="news">
+          <div class="news_content">
+            <div class="news_content_innerContainer">
+              <div class="news_content_innerContainer_backgroundTop"></div>
+              <div class="news_content_innerContainer_backgroundBottom"></div>
+              <div class="news_content_innerContainer_main">
+                <div class="news_content_innerContainer_main_top">
+                  <div class="news_content_innerContainer_main_top_breadcrumbs">
+                          <section class="s-breadcrumbs">
+                            <ul class="breadcrumbs">
+                              <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="index.html"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2831_2342)">
+<path d="M11.7985 5.36427L6.41446 0.458394C6.17814 0.243027 5.82177 0.243051 5.58554 0.458371L0.201516 5.3643C0.0122119 5.5368 -0.0503192 5.80258 0.042165 6.04138C0.134673 6.28019 0.359907 6.43448 0.616008 6.43448H1.47593V11.3498C1.47593 11.5447 1.63394 11.7027 1.82883 11.7027H4.77993C4.97481 11.7027 5.13283 11.5447 5.13283 11.3498V8.36537H6.86724V11.3498C6.86724 11.5447 7.02526 11.7027 7.22014 11.7027H10.1711C10.366 11.7027 10.524 11.5447 10.524 11.3498V6.43448H11.3841C11.6402 6.43448 11.8654 6.28016 11.9579 6.04138C12.0503 5.80256 11.9878 5.5368 11.7985 5.36427Z" fill="#664EF9"/>
+<path d="M10.4315 1.00195H8.06152L10.7844 3.47779V1.35483C10.7844 1.15995 10.6264 1.00195 10.4315 1.00195Z" fill="#664EF9"/>
+</g>
+<defs>
+<clipPath id="clip0_2831_2342">
+<rect width="12" height="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</a></li>
+                              <li class="breadcrumbs_item"><a class="breadcrumbs_link" href="newslist.html"><span class="breadcrumbs_title">Новости</span></a></li>
+                              <li class="breadcrumbs_item"><a class="breadcrumbs_link"><span class="breadcrumbs_title">Линия Сталина: суровый отдых в усадьбах на сутки </span></a></li>
+                            </ul>
+                          </section>
+                  </div>
+                  <div class="news_content_innerContainer_main_top_title"> 
+                    <h1>Линия Сталина: суровый отдых в усадьбах на сутки </h1>
+                  </div>
+                </div>
+                <div class="news_content_innerContainer_main_top_bottom">
+                  <div class="news_content_innerContainer_main_top_bottom_date">14 Января 2008</div>
+                  <div class="news_content_innerContainer_main_top_bottom_icons"><span>Поделиться</span>
+                    <div class="news_content_innerContainer_main_top_bottom_icons_item"><svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.2554 1.61604C24.4231 1.06908 24.2554 0.667969 23.4625 0.667969H20.836C20.1676 0.667969 19.8622 1.01497 19.6946 1.39608C19.6946 1.39608 18.3591 4.59437 16.4668 6.66814C15.8559 7.27156 15.5769 7.46212 15.2439 7.46212C15.0774 7.46212 14.8355 7.27156 14.8355 6.7246V1.61604C14.8355 0.959685 14.6427 0.667969 14.0857 0.667969H9.95847C9.54167 0.667969 9.29015 0.971447 9.29015 1.26081C9.29015 1.88188 10.2363 2.02539 10.3333 3.77568V7.57269C10.3333 8.40432 10.1812 8.55606 9.84589 8.55606C8.956 8.55606 6.79056 5.34601 5.50543 1.67133C5.25511 0.957332 5.0024 0.669145 4.33169 0.669145H1.70633C0.955376 0.669145 0.805664 1.01615 0.805664 1.39726C0.805664 2.08185 1.69555 5.46951 4.9509 9.94994C7.12112 13.0094 10.1765 14.668 12.9599 14.668C14.6283 14.668 14.8343 14.2998 14.8343 13.6646V11.3521C14.8343 10.6157 14.9936 10.4675 15.5218 10.4675C15.9098 10.4675 16.5781 10.6604 18.1364 12.1343C19.9161 13.8822 20.2108 14.6668 21.2108 14.6668H23.8362C24.586 14.6668 24.9608 14.2986 24.7452 13.5717C24.5093 12.8483 23.6589 11.7955 22.5307 10.5498C21.9175 9.83937 21.0012 9.07479 20.7222 8.6925C20.3329 8.19964 20.4455 7.98203 20.7222 7.54446C20.7234 7.54564 23.9224 3.1205 24.2554 1.61604Z" fill="#1E2123"/>
+</svg>
+
+                    </div>
+                    <div class="news_content_innerContainer_main_top_bottom_icons_item"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8047 0.667969C5.28266 0.667969 0.805664 5.14497 0.805664 10.667C0.805664 15.657 4.46166 19.793 9.24266 20.546V13.558H6.70266V10.667H9.24266V8.46397C9.24266 5.95597 10.7357 4.57297 13.0187 4.57297C14.1127 4.57297 15.2587 4.76797 15.2587 4.76797V7.22697H13.9947C12.7547 7.22697 12.3667 7.99897 12.3667 8.78997V10.665H15.1377L14.6947 13.556H12.3667V20.544C17.1477 19.795 20.8037 15.658 20.8037 10.667C20.8037 5.14497 16.3267 0.667969 10.8047 0.667969Z" fill="#1E2123"/>
+</svg>
+
+                    </div>
+                    <div class="news_content_innerContainer_main_top_bottom_icons_item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.90239 1.40754C7.63357 1.42468 4.90348 1.63296 3.37628 3.03228C2.24258 4.15939 1.84645 5.82104 1.80031 7.87884C1.76076 9.92872 1.71463 13.778 5.4255 14.8267V16.4218C5.4255 16.4218 5.40046 17.0611 5.8223 17.1929C6.34301 17.3577 6.63961 16.864 7.13396 16.3367L8.05673 15.2953C10.5944 15.5062 12.5388 15.0191 12.7629 14.9466C13.277 14.7819 16.1778 14.4121 16.6524 10.5621C17.1401 6.58695 16.4151 4.08227 15.11 2.94857L15.1034 2.94726C14.708 2.58474 13.1261 1.43127 9.58656 1.41808C9.58656 1.41808 9.32555 1.40161 8.90239 1.40754ZM8.94655 2.52607C9.30578 2.5241 9.52658 2.53926 9.52658 2.53926C12.519 2.54585 13.95 3.44885 14.2861 3.75205C15.3869 4.69394 15.9524 6.95276 15.5385 10.2721C15.143 13.4887 12.7899 13.693 12.3549 13.8314C12.1703 13.8907 10.4566 14.3126 8.29995 14.1741C8.29995 14.1741 6.69234 16.1126 6.19141 16.6136C6.11231 16.6993 6.02003 16.7256 5.96071 16.7124C5.87503 16.6927 5.84866 16.5872 5.85525 16.4422L5.86844 13.7932C2.72375 12.9231 2.9083 9.63936 2.94126 7.92563C2.98081 6.21191 3.30378 4.80665 4.25951 3.85751C5.54942 2.69086 7.86822 2.53267 8.94589 2.52607H8.94655ZM9.18384 4.2398C9.1579 4.23972 9.1322 4.24475 9.10822 4.25461C9.08423 4.26448 9.06243 4.27898 9.04406 4.29729C9.02569 4.3156 9.01111 4.33736 9.00117 4.36131C8.99122 4.38526 8.9861 4.41094 8.9861 4.43688C8.9861 4.48932 9.00693 4.53962 9.04402 4.5767C9.0811 4.61379 9.1314 4.63462 9.18384 4.63462C9.67386 4.62527 10.1609 4.71307 10.6168 4.89294C11.0727 5.07282 11.4885 5.34121 11.8401 5.68263C12.5586 6.3813 12.9086 7.31726 12.9217 8.54323C12.9217 8.5692 12.9269 8.59491 12.9368 8.61891C12.9467 8.6429 12.9613 8.66469 12.9797 8.68306C12.998 8.70142 13.0198 8.71598 13.0438 8.72592C13.0678 8.73586 13.0935 8.74097 13.1195 8.74097V8.73504C13.1719 8.73504 13.2222 8.71421 13.2593 8.67712C13.2964 8.64004 13.3172 8.58975 13.3172 8.5373C13.3417 7.96075 13.2485 7.38526 13.0434 6.84588C12.8383 6.30649 12.5255 5.8145 12.1242 5.39986C11.3398 4.63528 10.3498 4.2398 9.18318 4.2398H9.18384ZM6.57766 4.6946C6.43748 4.67462 6.29467 4.70249 6.17229 4.77369H6.16438C5.89414 4.93188 5.64499 5.12962 5.40771 5.39327C5.22974 5.60419 5.13022 5.81445 5.10385 6.01878C5.08834 6.13862 5.0996 6.26041 5.13681 6.37537L5.14999 6.38196C5.35315 6.97922 5.61824 7.55359 5.94094 8.09569C6.35923 8.85488 6.87314 9.55731 7.47011 10.1858L7.48989 10.2121L7.51625 10.2319L7.53602 10.2517L7.5558 10.2715C8.18673 10.8699 8.89102 11.386 9.65182 11.8072C10.5219 12.2818 11.0505 12.5059 11.3669 12.5982V12.6048C11.4591 12.6311 11.5435 12.6443 11.6292 12.6443C11.8993 12.6246 12.155 12.5151 12.3556 12.3332C12.6126 12.1025 12.8169 11.8468 12.9685 11.5765V11.5699C13.1201 11.2865 13.0674 11.0156 12.8499 10.8311C12.4115 10.4476 11.9369 10.1076 11.4328 9.81601C11.0966 9.63145 10.7539 9.7435 10.6155 9.92806L10.3189 10.3031C10.1673 10.4877 9.89042 10.4613 9.89042 10.4613L9.88251 10.4679C7.82604 9.94058 7.27897 7.8584 7.27897 7.8584C7.27897 7.8584 7.2526 7.57498 7.44375 7.42997L7.81286 7.13336C7.99082 6.98836 8.11606 6.64561 7.92491 6.30946C7.63367 5.80505 7.2937 5.33041 6.90985 4.89234C6.82636 4.78878 6.70849 4.71862 6.57766 4.6946ZM9.52593 5.28122C9.47348 5.2814 9.42326 5.3024 9.3863 5.3396C9.34934 5.37681 9.32867 5.42717 9.32885 5.47962C9.32902 5.53206 9.35002 5.58229 9.38723 5.61925C9.42444 5.65621 9.4748 5.67687 9.52724 5.6767C10.1869 5.68815 10.815 5.96074 11.2739 6.43469C11.481 6.66309 11.6401 6.93066 11.742 7.22161C11.8439 7.51256 11.8865 7.82098 11.8671 8.12864C11.8673 8.18097 11.8882 8.2311 11.9253 8.26804C11.9624 8.30498 12.0125 8.32572 12.0649 8.32572L12.0715 8.33363C12.0975 8.33363 12.1233 8.3285 12.1473 8.31852C12.1713 8.30854 12.1932 8.29391 12.2115 8.27548C12.2299 8.25705 12.2444 8.23518 12.2543 8.21111C12.2642 8.18704 12.2693 8.16126 12.2692 8.13523C12.289 7.35088 12.0451 6.69175 11.5639 6.16445C11.0828 5.63715 10.4105 5.34054 9.55361 5.28122C9.54439 5.28057 9.53514 5.28057 9.52593 5.28122ZM9.8489 6.34835C9.82245 6.34757 9.79611 6.352 9.77139 6.3614C9.74666 6.3708 9.72402 6.38498 9.70477 6.40313C9.68552 6.42128 9.67004 6.44304 9.6592 6.46717C9.64836 6.4913 9.64238 6.51733 9.6416 6.54378C9.64082 6.57022 9.64526 6.59656 9.65466 6.62129C9.66406 6.64601 9.67824 6.66865 9.69638 6.6879C9.71453 6.70715 9.73629 6.72263 9.76043 6.73347C9.78456 6.74431 9.81059 6.75029 9.83703 6.75107C10.4896 6.78403 10.8059 7.11359 10.8455 7.79249C10.8472 7.84378 10.8688 7.8924 10.9057 7.92807C10.9426 7.96374 10.9919 7.98366 11.0432 7.98364H11.0498C11.0764 7.98281 11.1025 7.97664 11.1266 7.9655C11.1507 7.95435 11.1724 7.93847 11.1902 7.91878C11.208 7.89909 11.2217 7.87601 11.2305 7.85092C11.2392 7.82582 11.2428 7.79922 11.241 7.77272C11.1948 6.88949 10.7137 6.39448 9.85681 6.34835C9.85417 6.34829 9.85153 6.34829 9.8489 6.34835Z" fill="white"/>
+</svg>
+
+                    </div>
+                    <div class="news_content_innerContainer_main_top_bottom_icons_item"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.7563 0.824461L1.5404 5.92074C0.638473 6.283 0.64369 6.78615 1.37492 7.01051L4.76797 8.06897L12.6185 3.11581C12.9897 2.88996 13.3289 3.01146 13.0501 3.25893L6.6896 8.99923H6.68811L6.6896 8.99998L6.45555 12.4974C6.79843 12.4974 6.94975 12.3401 7.14206 12.1545L8.79013 10.5519L12.2182 13.084C12.8503 13.4321 13.3043 13.2532 13.4615 12.4989L15.7119 1.89336C15.9422 0.969813 15.3593 0.551645 14.7563 0.824461Z" fill="#1E2123"/>
+</svg>
+
+                    </div>
+                    <div class="news_content_innerContainer_main_top_bottom_icons_item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.3797 3.58852C13.6794 2.88305 12.8458 2.32375 11.9275 1.94309C11.0092 1.56244 10.0244 1.36802 9.03032 1.37113C4.86354 1.37113 1.47212 4.76254 1.47212 8.93219C1.47212 10.2645 1.82118 11.5673 2.48211 12.7118L1.40918 16.6306L5.41765 15.5786C6.52583 16.1823 7.76745 16.499 9.02937 16.4999H9.03223C13.199 16.4999 16.5933 13.1085 16.5933 8.93886C16.5958 7.94513 16.4014 6.96074 16.0213 6.04257C15.6412 5.1244 15.0829 4.29064 14.3788 3.58947L14.3797 3.58852ZM9.03223 15.2239C7.90604 15.224 6.80053 14.9213 5.83156 14.3474L5.60171 14.2101L3.22315 14.8328L3.85832 12.5143L3.70954 12.2759C3.07795 11.2752 2.74418 10.1155 2.74724 8.93219C2.74926 7.26518 3.41257 5.66707 4.59159 4.48858C5.77062 3.31009 7.36903 2.64751 9.03604 2.64625C10.7136 2.64625 12.2939 3.3024 13.4794 4.48787C14.0644 5.07077 14.5281 5.76382 14.8437 6.52697C15.1593 7.29013 15.3206 8.10826 15.3182 8.9341C15.3153 12.4028 12.4961 15.2229 9.03223 15.2229V15.2239ZM12.478 10.5154C12.2901 10.42 11.3602 9.96411 11.1876 9.90116C11.015 9.83822 10.8891 9.80579 10.7613 9.99653C10.6364 10.1844 10.273 10.6107 10.1624 10.7385C10.0518 10.8635 9.94207 10.8816 9.75419 10.7862C9.56631 10.6908 8.95498 10.4915 8.23397 9.84775C7.67318 9.34705 7.29265 8.72714 7.18202 8.53926C7.07139 8.35138 7.16962 8.24742 7.26595 8.15491C7.35274 8.07098 7.45383 7.9346 7.5492 7.82397C7.64457 7.71334 7.67414 7.63609 7.73708 7.50829C7.80003 7.38335 7.76951 7.27272 7.72182 7.17735C7.67414 7.08198 7.29551 6.15211 7.14101 5.77348C6.98937 5.40344 6.83105 5.45494 6.7147 5.44827C6.60407 5.44254 6.47913 5.44254 6.3542 5.44254C6.22926 5.44254 6.02326 5.49023 5.85063 5.67811C5.67801 5.86599 5.18876 6.32473 5.18876 7.2546C5.18876 8.18448 5.86494 9.08192 5.96031 9.20972C6.05568 9.33466 7.29265 11.2449 9.18768 12.0623C9.63784 12.2559 9.98976 12.3722 10.2635 12.4619C10.7165 12.6049 11.1275 12.584 11.4528 12.5363C11.8161 12.4829 12.5705 12.0804 12.7288 11.6388C12.8871 11.1973 12.8871 10.8196 12.8395 10.7414C12.7946 10.6575 12.6697 10.6107 12.479 10.5144L12.478 10.5154Z" fill="white"/>
+</svg>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="news_content_innerContainer_main_newsData"></div>
+                <div class="news_content_innerContainer_main_newsData_photo">
+                  <!--include ../../assets/images/newsPhotoImg.png-->
+                </div>
+                <div class="news_content_innerContainer_main_newsData_text">
+                  <p>Итак, утром вы выезжаете в путь по Молодеченской трассе. Если автомобиля у вас нет - садитесь на маршрутку в сторону Молодечно от железнодорожного вокзала. Остановка называется «Линия Сталина» - да-да, именно здесь вы и проведёте ближайшие несколько часов, а вероятнее всего – останетесь до самого вечера.</p>
+                  <p>«Линия Сталина» - это уникальный музейный комплекс, располагающийся под открытым небом. Поэтому желательно приезжать сюда в хорошую погоду. Его территория поистине огромна: целых 26 га. Такое название дано музею неспроста: «Линией Сталина» в 20е-30е гг. XX века именовали цепь укреплений, созданную для защиты государственной границы СССР. Комплекс же построен лишь в 2005 году – к шестидесятой годовщине Победы в Великой Отечественной войне.</p>
+                  <p>Если вы заранее позаботились о том, чтобы снять усадьбу на сутки в направлении Молодечно, то можете провести в музейном комплексе хоть целый день. Здесь действительно есть на что посмотреть: ДОТы, испещрённые следами немецких снарядов, окопы, противотанковые заграждения, зенитные пушки, бронетехника… Вы встретите даже элементы ракетных войск – и всё это не муляжи, а настоящие боевые орудия! За отдельную плату вам предложат пострелять из винтовки и пулемёта, а также прокатиться на танке. Проголодались? Загляните в кафе и насладитесь сытным домашним обедом.</p>
+                  <p>Посетить «Линию Сталина» будет интересно как взрослым, так и детям. Особенно мальчишкам! Уставшие от впечатлений, они будут рады вместо долгой дороги домой остановиться на ночь в уютном современном коттедже. На сайте можно выбрать и снять посуточно наиболее удобный для вас вариант. Проведите незабываемые выходные за городом – приезжайте в «Линию Сталина»!</p>
+                  <p>Отличная усадьба в 10 км от "Линии Сталина".     </p>
+                </div>
+              </div>
+              <div class="news_content_innerContainer_newsList">
+                <div class="news_content_innerContainer_newsList_title">Читайте также</div>
+                <div class="news_content_innerContainer_newsList_wrapper">
+                        <div class="newslist_content_innerContainer_newsCards_card">
+                                <div class="newsCard">
+                                  <div class="newsCard_top">
+                                    <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                  </div>
+                                  <div class="newsCard_middle">
+                                    <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                    <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                    <hr>
+                                  </div>
+                                  <div class="newsCard_bottom">
+                                    <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                    <div class="newsCard_bottom_button">
+                                            <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                              <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                              </div>
+                                            </button>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="newslist_content_innerContainer_newsCards_card">
+                                <div class="newsCard">
+                                  <div class="newsCard_top">
+                                    <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                  </div>
+                                  <div class="newsCard_middle">
+                                    <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                    <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                    <hr>
+                                  </div>
+                                  <div class="newsCard_bottom">
+                                    <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                    <div class="newsCard_bottom_button">
+                                            <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                              <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                              </div>
+                                            </button>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="newslist_content_innerContainer_newsCards_card">
+                                <div class="newsCard">
+                                  <div class="newsCard_top">
+                                    <div class="newsCard_top_photo"><img src="../../assets/images/card_1_Img.png"></div>
+                                  </div>
+                                  <div class="newsCard_middle">
+                                    <div class="newsCard_middle_title"><span>Линия Сталина: суровый отдых в усадьбах на сутки</span></div>
+                                    <div class="newsCard_middle_description"><span>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</span></div>
+                                    <hr>
+                                  </div>
+                                  <div class="newsCard_bottom">
+                                    <div class="newsCard_bottom_date"><span>14 Января 2008</span></div>
+                                    <div class="newsCard_bottom_button">
+                                            <button class="stdBtn primary purple light w7 standard" style="gap:5px;flex-direction:left;width:undefined;">
+                                              <div class="stdBtn_innerText"><span id="undefined_innerText">Читать</span>
+                                              </div>
+                                            </button>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_innerContainer">
+          <div class="footer_leftContainter">
+            <div class="footer_leftContainter_logo"><img src="../../assets/images/logo.png">
+              <div class="footer_leftContainter_logoUnderText">СДАЁМ БАЙ</div>
+            </div>
+            <div class="footer_leftContainter_contactText">ИП Шушкевич Андрей Викторович <br> УНП 192602485 Минским горисполкомом <br> 10.02.2016 <br> 220068, РБ, г. Минск, ул. Осипенко, 21, кв.23 <br> +375 29 621 48 33, sdaem@sdaem.by <br> Режим работы: 08:00-22:00</div>
+          </div>
+          <div class="footer_middleContainer">
+            <div class="footer_middleContainer_Buttons">
+              <div class="footer_middleContainer_Buttons_leftButtons"><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title" href="/cathalog.html">Коттетжи и усадьбы</div></a><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Бани и сауны</div></a><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Авто на прокат</div></a></div>
+              <div class="footer_middleContainer_Buttons_middleButtons"><a href="/cathalog.html">
+                  <div class="footer_middleContainer_Buttons_Button_Title">Квартиры</div></a>
+                <div class="footer_middleContainer_Buttons_List">
+                  <div class="footer_middleContainer_Buttons_ButtonList"><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Минске</div></a><a href="/cathalog.html"> 
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Гомеле</div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Бресте</div></a></div>
+                  <div class="footer_middleContainer_Buttons_ButtonList"><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Витебске </div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Гродно</div></a><a href="/cathalog.html">
+                      <div class="footer_middleContainer_Buttons_Button">Квартиры в Могилеве </div></a></div>
+                </div>
+              </div>
+              <div class="footer_middleContainer_Buttons_rightButtons">
+                <div class="footer_middleContainer_Buttons_ButtonList"><a href="/newslist.html">
+                    <div class="footer_middleContainer_Buttons_Button">Новости</div></a><a href="/cathalog.html">
+                    <div class="footer_middleContainer_Buttons_Button">Размещение и тарифы </div></a><a href="/cathalog.html">
+                    <div class="footer_middleContainer_Buttons_Button">Объявления на карте</div></a><a href="/contacts.html">
+                    <div class="footer_middleContainer_Buttons_Button">Контакты </div></a></div>
+              </div>
+            </div>
+            <div class="footer_middleContainer_Icons">
+              <div class="footer_middleContainer_Icons_Social">
+                <div class="footer_middleContainer_Icons_Social_Text">Мы в соцсетях</div>
+                <div class="footer_middleContainer_Icons_Social_icons">
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon" href="http://vk.com"><a href="http://vk.com">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8056 5.90907C8.48036 5.90907 5.79677 8.59267 5.79677 11.9179C5.79677 15.2431 8.48036 17.9267 11.8056 17.9267C15.1308 17.9267 17.8143 15.2431 17.8143 11.9179C17.8143 8.59267 15.1308 5.90907 11.8056 5.90907ZM11.8056 15.8231C9.65517 15.8231 7.90028 14.0683 7.90028 11.9179C7.90028 9.76747 9.65517 8.01259 11.8056 8.01259C13.9559 8.01259 15.7108 9.76747 15.7108 11.9179C15.7108 14.0683 13.9559 15.8231 11.8056 15.8231ZM18.0604 4.26259C17.2841 4.26259 16.6571 4.88954 16.6571 5.66591C16.6571 6.44228 17.2841 7.06923 18.0604 7.06923C18.8368 7.06923 19.4638 6.44521 19.4638 5.66591C19.464 5.48156 19.4279 5.29897 19.3574 5.12861C19.287 4.95825 19.1836 4.80345 19.0533 4.6731C18.9229 4.54274 18.7681 4.43938 18.5977 4.36894C18.4274 4.2985 18.2448 4.26236 18.0604 4.26259ZM23.5184 11.9179C23.5184 10.3007 23.5331 8.69814 23.4423 7.08388C23.3515 5.20888 22.9237 3.54482 21.5526 2.17372C20.1786 0.799699 18.5175 0.374895 16.6425 0.284075C15.0253 0.193254 13.4227 0.207903 11.8085 0.207903C10.1913 0.207903 8.58876 0.193254 6.9745 0.284075C5.0995 0.374895 3.43544 0.802629 2.06435 2.17372C0.690324 3.54775 0.26552 5.20888 0.174699 7.08388C0.0838792 8.70107 0.0985277 10.3036 0.0985277 11.9179C0.0985277 13.5321 0.0838792 15.1376 0.174699 16.7519C0.26552 18.6269 0.693254 20.2909 2.06435 21.662C3.43837 23.036 5.0995 23.4608 6.9745 23.5517C8.59169 23.6425 10.1942 23.6278 11.8085 23.6278C13.4257 23.6278 15.0282 23.6425 16.6425 23.5517C18.5175 23.4608 20.1815 23.0331 21.5526 21.662C22.9267 20.288 23.3515 18.6269 23.4423 16.7519C23.536 15.1376 23.5184 13.5351 23.5184 11.9179ZM20.9403 18.8261C20.7265 19.3593 20.4686 19.7577 20.0556 20.1679C19.6425 20.581 19.247 20.8388 18.7138 21.0526C17.1727 21.6649 13.5136 21.5272 11.8056 21.5272C10.0975 21.5272 6.43544 21.6649 4.89443 21.0556C4.36122 20.8417 3.96279 20.5839 3.55263 20.1708C3.13954 19.7577 2.88173 19.3622 2.66786 18.829C2.05849 17.2851 2.19618 13.6259 2.19618 11.9179C2.19618 10.2099 2.05849 6.54775 2.66786 5.00673C2.88173 4.47353 3.13954 4.07509 3.55263 3.66493C3.96571 3.25478 4.36122 2.99404 4.89443 2.78017C6.43544 2.17079 10.0975 2.30849 11.8056 2.30849C13.5136 2.30849 17.1757 2.17079 18.7167 2.78017C19.2499 2.99404 19.6483 3.25185 20.0585 3.66493C20.4716 4.07802 20.7294 4.47353 20.9433 5.00673C21.5526 6.54775 21.4149 10.2099 21.4149 11.9179C21.4149 13.6259 21.5526 17.2851 20.9403 18.8261Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon"><a href="http://vk.com">
+                       <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.2554 1.61604C24.4231 1.06908 24.2554 0.667969 23.4625 0.667969H20.836C20.1676 0.667969 19.8622 1.01497 19.6946 1.39608C19.6946 1.39608 18.3591 4.59437 16.4668 6.66814C15.8559 7.27156 15.5769 7.46212 15.2439 7.46212C15.0774 7.46212 14.8355 7.27156 14.8355 6.7246V1.61604C14.8355 0.959685 14.6427 0.667969 14.0857 0.667969H9.95847C9.54167 0.667969 9.29015 0.971447 9.29015 1.26081C9.29015 1.88188 10.2363 2.02539 10.3333 3.77568V7.57269C10.3333 8.40432 10.1812 8.55606 9.84589 8.55606C8.956 8.55606 6.79056 5.34601 5.50543 1.67133C5.25511 0.957332 5.0024 0.669145 4.33169 0.669145H1.70633C0.955376 0.669145 0.805664 1.01615 0.805664 1.39726C0.805664 2.08185 1.69555 5.46951 4.9509 9.94994C7.12112 13.0094 10.1765 14.668 12.9599 14.668C14.6283 14.668 14.8343 14.2998 14.8343 13.6646V11.3521C14.8343 10.6157 14.9936 10.4675 15.5218 10.4675C15.9098 10.4675 16.5781 10.6604 18.1364 12.1343C19.9161 13.8822 20.2108 14.6668 21.2108 14.6668H23.8362C24.586 14.6668 24.9608 14.2986 24.7452 13.5717C24.5093 12.8483 23.6589 11.7955 22.5307 10.5498C21.9175 9.83937 21.0012 9.07479 20.7222 8.6925C20.3329 8.19964 20.4455 7.98203 20.7222 7.54446C20.7234 7.54564 23.9224 3.1205 24.2554 1.61604Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                  <div class="footer_middleContainer_Icons_Social_icons_icon" id="vk_icon"><a href="http://vk.com">
+                       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8047 0.667969C5.28266 0.667969 0.805664 5.14497 0.805664 10.667C0.805664 15.657 4.46166 19.793 9.24266 20.546V13.558H6.70266V10.667H9.24266V8.46397C9.24266 5.95597 10.7357 4.57297 13.0187 4.57297C14.1127 4.57297 15.2587 4.76797 15.2587 4.76797V7.22697H13.9947C12.7547 7.22697 12.3667 7.99897 12.3667 8.78997V10.665H15.1377L14.6947 13.556H12.3667V20.544C17.1477 19.795 20.8037 15.658 20.8037 10.667C20.8037 5.14497 16.3267 0.667969 10.8047 0.667969Z" fill="#1E2123"/>
+</svg>
+</a></div>
+                </div>
+              </div>
+              <div class="footer_middleContainer_Icons_Card">
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/visaImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img">   <img src="../../assets/images/webpayImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/visaVfImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/masterImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/secureCodeImg.png"></div>
+                <div class="footer_middleContainer_Icons_Card_img"><img src="../../assets/images/belkartImg.png"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
